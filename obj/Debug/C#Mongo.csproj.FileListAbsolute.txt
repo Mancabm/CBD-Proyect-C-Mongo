@@ -1,0 +1,10 @@
+C:\universidad\4\CBD\C#Mongo\C#Mongo\obj\Debug\C#Mongo.csproj.AssemblyReference.cache
+C:\universidad\4\CBD\C#Mongo\C#Mongo\obj\Debug\C#Mongo.csproj.SuggestedBindingRedirects.cache
+C:\universidad\4\CBD\C#Mongo\C#Mongo\obj\Debug\C_Mongo.ExampleForm.resources
+C:\universidad\4\CBD\C#Mongo\C#Mongo\obj\Debug\C#Mongo.csproj.GenerateResource.cache
+C:\universidad\4\CBD\C#Mongo\C#Mongo\obj\Debug\C#Mongo.csproj.CoreCompileInputs.cache
+C:\universidad\4\CBD\C#Mongo\C#Mongo\bin\Debug\C#Mongo.exe.config
+C:\universidad\4\CBD\C#Mongo\C#Mongo\bin\Debug\C#Mongo.exe
+C:\universidad\4\CBD\C#Mongo\C#Mongo\bin\Debug\C#Mongo.pdb
+C:\universidad\4\CBD\C#Mongo\C#Mongo\obj\Debug\C#Mongo.exe
+C:\universidad\4\CBD\C#Mongo\C#Mongo\obj\Debug\C#Mongo.pdb

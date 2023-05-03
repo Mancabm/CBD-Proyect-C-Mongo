@@ -1,0 +1,10 @@
+C:\universidad\4\CBD\C#Mongo\C#Mongo\bin\Release\C#Mongo.exe.config
+C:\universidad\4\CBD\C#Mongo\C#Mongo\bin\Release\C#Mongo.exe
+C:\universidad\4\CBD\C#Mongo\C#Mongo\bin\Release\C#Mongo.pdb
+C:\universidad\4\CBD\C#Mongo\C#Mongo\obj\Release\C#Mongo.csproj.AssemblyReference.cache
+C:\universidad\4\CBD\C#Mongo\C#Mongo\obj\Release\C#Mongo.csproj.SuggestedBindingRedirects.cache
+C:\universidad\4\CBD\C#Mongo\C#Mongo\obj\Release\C_Mongo.ExampleForm.resources
+C:\universidad\4\CBD\C#Mongo\C#Mongo\obj\Release\C#Mongo.csproj.GenerateResource.cache
+C:\universidad\4\CBD\C#Mongo\C#Mongo\obj\Release\C#Mongo.csproj.CoreCompileInputs.cache
+C:\universidad\4\CBD\C#Mongo\C#Mongo\obj\Release\C#Mongo.exe
+C:\universidad\4\CBD\C#Mongo\C#Mongo\obj\Release\C#Mongo.pdb
