@@ -39,6 +39,7 @@
     <None Include="libmongocrypt.dylib" />
     <None Include="libmongocrypt.so" />
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\C_Mongo.Models.ProductModel.datasource" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FormCreateProduct.cs">

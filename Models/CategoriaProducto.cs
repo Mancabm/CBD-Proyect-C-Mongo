@@ -12,6 +12,8 @@ namespace C_Mongo.Models
         [Description("Ropa")]
         Ropa,
         [Description("Deportes")]
-        Deportes
+        Deportes,
+        [Description("Videojuegos")]
+        Videojuegos
     }
 }
