@@ -24,11 +24,6 @@ namespace C_Mongo
         {
             ProductDataAccess productDB = new ProductDataAccess();
             List<ProductModel> products = await productDB.GetAllProducts();
-            listadoProductos.ColumnCount = 4;
-            listadoProductos.Columns[0].Name = "Name";
-            listadoProductos.Columns[1].Name = "Description";
-            listadoProductos.Columns[2].Name = "Price";
-            listadoProductos.Columns[3].Name = "Categories";
             foreach(ProductModel product in products)
             {
                 string categorias = "";
@@ -40,11 +35,12 @@ namespace C_Mongo
                         categorias = categorias + ", ";
                     }
                 }
-                string[] row = { product.Name, product.Description, 
-                    (product.Price.ToString() + '€'), categorias};
+                string[] row = {product.Name, product.Description, product.Price +"€",
+                    categorias, "Update", "Delete"};
                 listadoProductos.Rows.Add(row);
+
             }
         }
-       
+
     }
 }
