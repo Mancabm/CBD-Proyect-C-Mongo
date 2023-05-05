@@ -1,4 +1,5 @@
-﻿
+﻿using System;
+using System.Collections.Generic;
 using MongoDB.Bson.Serialization.Attributes;
 using MongoDB.Bson;
 
@@ -14,7 +15,7 @@ namespace C_Mongo.Models
 
         public int Price { get; set; }
 
-        public CategoriaProducto Categoria { get; set;}
+        public List<CategoriaProducto> Categorias { get; set;}
 
 
     }

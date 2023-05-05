@@ -6,6 +6,7 @@ using System.Linq;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Reflection;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace C_Mongo
 {
@@ -32,7 +33,13 @@ namespace C_Mongo
             string description = descripcion.Text.Trim();
             int price = (int)numericUpDown1.Value;
             ProductDataAccess db = new ProductDataAccess();
-            var categoriaSeleccionada = (CategoriaProducto)Enum.Parse(typeof(CategoriaProducto), comboBox1.SelectedItem.ToString());
+            var Categorias = categoryBox.SelectedItems;
+            List<CategoriaProducto> categoriasSeleccionadas = new List<CategoriaProducto>();
+            foreach( var categoria in Categorias)
+            {
+                var categoriaSeleccionada = (CategoriaProducto)Enum.Parse(typeof(CategoriaProducto), categoria.ToString());
+                categoriasSeleccionadas.Add(categoriaSeleccionada);
+            }
 
             // Crear un nuevo producto
             var producto = new ProductModel
@@ -40,7 +47,7 @@ namespace C_Mongo
                 Name = nombre,
                 Description = description,
                 Price = price,
-                Categoria= categoriaSeleccionada,
+                Categorias= categoriasSeleccionadas,
             };
 
             // Guardar el producto en la base de datos

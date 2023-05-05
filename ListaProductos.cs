@@ -31,8 +31,17 @@ namespace C_Mongo
             listadoProductos.Columns[3].Name = "Categories";
             foreach(ProductModel product in products)
             {
+                string categorias = "";
+                for (var indexer = 0; indexer < product.Categorias.Count; indexer++)
+                {
+                    categorias = categorias + product.Categorias[0].ToString();
+                    if (indexer < product.Categorias.Count - 1)
+                    {
+                        categorias = categorias + ", ";
+                    }
+                }
                 string[] row = { product.Name, product.Description, 
-                    (product.Price.ToString() + '€'), product.Categoria.ToString()};
+                    (product.Price.ToString() + '€'), categorias};
                 listadoProductos.Rows.Add(row);
             }
         }
