@@ -1,6 +1,7 @@
 ﻿using C_Mongo.Models;
 using MongoDB.Driver;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Threading.Tasks;
 
 namespace C_Mongo.MongoDataAccess
@@ -37,6 +38,14 @@ namespace C_Mongo.MongoDataAccess
             var categoriasCollection = ConnectToMongo<CategoriaProducto>(Categoriascollection);
             var results = await categoriasCollection.FindAsync(_ => true);
             return results.ToList();
+        }
+
+        public async Task<List<ProductModel>> GetProductsByCategory(CategoriaProducto category)
+        {
+            var productCollection = ConnectToMongo<ProductModel>(Productscollection);
+            var filter = Builders<ProductModel>.Filter
+                .AnyEq(product => product.Categorias, category);
+            return await productCollection.Find(filter).ToListAsync();
         }
 
     }

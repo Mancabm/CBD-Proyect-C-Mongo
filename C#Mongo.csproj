@@ -42,6 +42,12 @@
     <None Include="Properties\DataSources\C_Mongo.Models.ProductModel.datasource" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CategoryFilter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CategoryFilter.Designer.cs">
+      <DependentUpon>CategoryFilter.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormCreateProduct.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -191,6 +197,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="CategoryFilter.resx">
+      <DependentUpon>CategoryFilter.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormCreateProduct.resx">
       <DependentUpon>FormCreateProduct.cs</DependentUpon>
     </EmbeddedResource>

@@ -14,22 +14,37 @@ namespace C_Mongo
 {
     public partial class ListaProductos : Form
     {
+        public string categoryAttribute { get; set; }
         public ListaProductos()
         {
             InitializeComponent();
             InitializeData();
         }
+        public ListaProductos(string categoryProduct)
+        {
+            InitializeComponent();
+            this.categoryAttribute = categoryProduct;
+            InitializeData();
+        }
 
         private async void InitializeData()
         {
+            List<ProductModel> products = new List<ProductModel>();
             ProductDataAccess productDB = new ProductDataAccess();
-            List<ProductModel> products = await productDB.GetAllProducts();
+            if (categoryAttribute == null)
+            {
+                products = await productDB.GetAllProducts();
+            }
+            else
+            {
+                products = await productDB.GetProductsByCategory((CategoriaProducto)Enum.Parse(typeof(CategoriaProducto), categoryAttribute.ToString()));
+            }
             foreach(ProductModel product in products)
             {
                 string categorias = "";
                 for (var indexer = 0; indexer < product.Categorias.Count; indexer++)
                 {
-                    categorias = categorias + product.Categorias[0].ToString();
+                    categorias = categorias + product.Categorias[indexer].ToString();
                     if (indexer < product.Categorias.Count - 1)
                     {
                         categorias = categorias + ", ";

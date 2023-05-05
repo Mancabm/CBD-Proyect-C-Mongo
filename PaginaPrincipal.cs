@@ -29,5 +29,12 @@ namespace C_Mongo
             ListaProductos cp = new ListaProductos();
             cp.Show();
         }
+
+        private void categoryLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            CategoryFilter categoryFilter = new CategoryFilter();
+            categoryFilter.Show();
+
+        }
     }
 }
