@@ -32,6 +32,7 @@
             this.listadoProductos = new System.Windows.Forms.DataGridView();
             this.productModelBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.productModelBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,6 +50,7 @@
             this.listadoProductos.AllowUserToDeleteRows = false;
             this.listadoProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.listadoProductos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.id,
             this.Nombre,
             this.Description,
             this.Price,
@@ -70,6 +72,15 @@
             // productModelBindingSource
             // 
             this.productModelBindingSource.DataSource = typeof(C_Mongo.Models.ProductModel);
+            // 
+            // id
+            // 
+            this.id.HeaderText = "id";
+            this.id.MinimumWidth = 6;
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            this.id.Visible = false;
+            this.id.Width = 125;
             // 
             // Nombre
             // 
@@ -140,6 +151,7 @@
         private System.Windows.Forms.DataGridView listadoProductos;
         private System.Windows.Forms.BindingSource productModelBindingSource;
         private System.Windows.Forms.BindingSource productModelBindingSource1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Description;
         private System.Windows.Forms.DataGridViewTextBoxColumn Price;

@@ -35,7 +35,7 @@ namespace C_Mongo
                         categorias = categorias + ", ";
                     }
                 }
-                string[] row = {product.Name, product.Description, product.Price +"€",
+                string[] row = {product.Id, product.Name, product.Description, product.Price +"€",
                     categorias, "Update", "Delete"};
                 listadoProductos.Rows.Add(row);
 
