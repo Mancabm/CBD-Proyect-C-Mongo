@@ -11,6 +11,7 @@ namespace C_Mongo
 {
     class ProgramMain
     {
+        [STAThread]
         public static void Main(string[] args)
         {
             Inicio form = new Inicio();

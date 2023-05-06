@@ -11,9 +11,10 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 namespace C_Mongo
 {
     
-
     public partial class FormCreateProduct : Form
     {
+        
+
 
         private List<UserModel> users;
         private List<string> userNames;
@@ -22,13 +23,14 @@ namespace C_Mongo
         {
             InitializeComponent();
             this.WindowState = FormWindowState.Normal;
+           
 
         }
 
   
         private async void AñadirProducto_Click(object sender, EventArgs e)
         {
-            // Obtener los valores del formulario
+            
             string nombre = name.Text.Trim();
             string description = descripcion.Text.Trim();
             int price = (int)numericUpDown1.Value;
@@ -41,7 +43,7 @@ namespace C_Mongo
                 categoriasSeleccionadas.Add(categoriaSeleccionada);
             }
 
-            // Crear un nuevo producto
+          
             var producto = new ProductModel
             {
                 Name = nombre,
@@ -50,7 +52,7 @@ namespace C_Mongo
                 Categorias= categoriasSeleccionadas,
             };
 
-            // Guardar el producto en la base de datos
+           
             try
             {
                 await db.CreateProduct(producto);

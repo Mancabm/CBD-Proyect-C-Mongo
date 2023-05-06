@@ -30,8 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.listadoProductos = new System.Windows.Forms.DataGridView();
-            this.productModelBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.productModelBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -39,6 +37,8 @@
             this.Categories = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Update = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.productModelBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.productModelBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.listadoProductos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productModelBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productModelBindingSource)).BeginInit();
@@ -57,21 +57,13 @@
             this.Categories,
             this.Update,
             this.Delete});
-            this.listadoProductos.Location = new System.Drawing.Point(64, 27);
-            this.listadoProductos.Margin = new System.Windows.Forms.Padding(4);
+            this.listadoProductos.Location = new System.Drawing.Point(48, 22);
             this.listadoProductos.Name = "listadoProductos";
             this.listadoProductos.ReadOnly = true;
             this.listadoProductos.RowHeadersWidth = 51;
-            this.listadoProductos.Size = new System.Drawing.Size(960, 478);
+            this.listadoProductos.Size = new System.Drawing.Size(720, 388);
             this.listadoProductos.TabIndex = 0;
-            // 
-            // productModelBindingSource1
-            // 
-            this.productModelBindingSource1.DataSource = typeof(C_Mongo.Models.ProductModel);
-            // 
-            // productModelBindingSource
-            // 
-            this.productModelBindingSource.DataSource = typeof(C_Mongo.Models.ProductModel);
+            this.listadoProductos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.listadoProductos_CellContentClick);
             // 
             // id
             // 
@@ -130,13 +122,20 @@
             this.Delete.ReadOnly = true;
             this.Delete.Width = 91;
             // 
+            // productModelBindingSource1
+            // 
+            this.productModelBindingSource1.DataSource = typeof(C_Mongo.Models.ProductModel);
+            // 
+            // productModelBindingSource
+            // 
+            this.productModelBindingSource.DataSource = typeof(C_Mongo.Models.ProductModel);
+            // 
             // ListaProductos
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.listadoProductos);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ListaProductos";
             this.Text = "ListaProductos";
             ((System.ComponentModel.ISupportInitialize)(this.listadoProductos)).EndInit();
