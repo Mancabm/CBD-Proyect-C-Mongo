@@ -48,6 +48,12 @@
     <Compile Include="FormCreateProduct.Designer.cs">
       <DependentUpon>FormCreateProduct.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormUpdateProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUpdateProduct.Designer.cs">
+      <DependentUpon>FormUpdateProduct.cs</DependentUpon>
+    </Compile>
     <Compile Include="Inicio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -193,6 +199,9 @@
   <ItemGroup>
     <EmbeddedResource Include="FormCreateProduct.resx">
       <DependentUpon>FormCreateProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUpdateProduct.resx">
+      <DependentUpon>FormUpdateProduct.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inicio.resx">
       <DependentUpon>Inicio.cs</DependentUpon>

@@ -14,6 +14,7 @@ namespace C_Mongo
 {
     public partial class ListaProductos : Form
     {
+        
         public ListaProductos()
         {
             InitializeComponent();
@@ -22,8 +23,10 @@ namespace C_Mongo
 
         private async void InitializeData()
         {
+
             ProductDataAccess productDB = new ProductDataAccess();
-            List<ProductModel> products = await productDB.GetAllProducts();
+            List<ProductModel> products = await productDB.DeleteProduct();
+            
             foreach(ProductModel product in products)
             {
                 string categorias = "";
@@ -42,5 +45,45 @@ namespace C_Mongo
             }
         }
 
+        private  void listadoProductos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+          
+
+            if (listadoProductos.Columns[e.ColumnIndex].Name=="Delete") 
+            {
+                if (MessageBox.Show("¿Estás seguro de que quieres borrar este producto?","Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question)== DialogResult.Yes)
+                {
+                    string productId = listadoProductos.Rows[e.RowIndex].Cells["Id"].Value.ToString();
+
+                    
+                    ProductModel productToDelete = new ProductModel { Id = productId };
+
+                    ProductDataAccess productDB = new ProductDataAccess();
+
+                    productDB.DeleteProduct(productToDelete).Wait();
+
+                    listadoProductos.Rows.RemoveAt(e.RowIndex);
+                }
+            
+            }
+            if (listadoProductos.Columns[e.ColumnIndex].Name == "Update")
+            {
+                if (MessageBox.Show("¿Estás seguro de que quieres actualizar este producto?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    string productId = listadoProductos.Rows[e.RowIndex].Cells["Id"].Value.ToString();
+                    ProductDataAccess productDB = new ProductDataAccess();
+
+                    ProductModel pro = productDB.GetProductByID(productId);
+
+                    FormUpdateProduct updateProduct = new FormUpdateProduct(pro);
+
+                    updateProduct.Show();
+                  
+                }
+
+
+
+            }
+        }
     }
 }

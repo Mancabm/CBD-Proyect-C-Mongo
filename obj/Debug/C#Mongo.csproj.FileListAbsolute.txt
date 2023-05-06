@@ -112,3 +112,4 @@ C:\universidad\4\CBD\C#Mongo\C#Mongo\obj\Debug\C_Mongo.ListaProductos.resources
 C:\universidad\4\CBD\C#Mongo\C#Mongo\obj\Debug\C_Mongo.PaginaPrincipal.resources
 C:\universidad\4\CBD\C#Mongo\C#Mongo\obj\Debug\C_Mongo.Properties.Resources.resources
 C:\universidad\4\CBD\C#Mongo\C#Mongo\obj\Debug\C#Mongo.csproj.CopyComplete
+C:\Users\juana\source\repos\CBD-Proyect-C-Mongo\obj\Debug\C_Mongo.FormUpdateProduct.resources
