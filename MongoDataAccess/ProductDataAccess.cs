@@ -13,7 +13,6 @@ namespace C_Mongo.MongoDataAccess
         private const string ConnectionString = "mongodb://localhost:27017";
         private const string DatabaseName = "ProyectoCBD-MongoDbyC#";
         private const string Productscollection = "Productos";
-        private const string Categoriascollection = "Categorias";
         private IMongoCollection<T> ConnectToMongo<T>(in string collection)
         {
             var client = new MongoClient(ConnectionString);
@@ -33,13 +32,6 @@ namespace C_Mongo.MongoDataAccess
         {
             var productsCollection = ConnectToMongo<ProductModel>(Productscollection);
             return productsCollection.InsertOneAsync(product);
-        }
-
-        public async Task<List<CategoriaProducto>> GetAllCategorias()
-        {
-            var categoriasCollection = ConnectToMongo<CategoriaProducto>(Categoriascollection);
-            var results = await categoriasCollection.FindAsync(_ => true);
-            return results.ToList();
         }
 
         public Task UpdateProduct(ProductModel product)

@@ -35,8 +35,8 @@
             this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Categories = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Update = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Actualizar = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Borrar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.productModelBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.productModelBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.listadoProductos)).BeginInit();
@@ -55,8 +55,8 @@
             this.Description,
             this.Price,
             this.Categories,
-            this.Update,
-            this.Delete});
+            this.Actualizar,
+            this.Borrar});
             this.listadoProductos.Location = new System.Drawing.Point(48, 22);
             this.listadoProductos.Name = "listadoProductos";
             this.listadoProductos.ReadOnly = true;
@@ -84,7 +84,7 @@
             // 
             // Description
             // 
-            this.Description.HeaderText = "Description";
+            this.Description.HeaderText = "Descripción";
             this.Description.MinimumWidth = 6;
             this.Description.Name = "Description";
             this.Description.ReadOnly = true;
@@ -92,7 +92,7 @@
             // 
             // Price
             // 
-            this.Price.HeaderText = "Price";
+            this.Price.HeaderText = "Precio";
             this.Price.MinimumWidth = 6;
             this.Price.Name = "Price";
             this.Price.ReadOnly = true;
@@ -100,27 +100,27 @@
             // 
             // Categories
             // 
-            this.Categories.HeaderText = "Categories";
+            this.Categories.HeaderText = "Categorías";
             this.Categories.MinimumWidth = 6;
             this.Categories.Name = "Categories";
             this.Categories.ReadOnly = true;
             this.Categories.Width = 125;
             // 
-            // Update
+            // Actualizar
             // 
-            this.Update.HeaderText = "Update";
-            this.Update.MinimumWidth = 6;
-            this.Update.Name = "Update";
-            this.Update.ReadOnly = true;
-            this.Update.Width = 90;
+            this.Actualizar.HeaderText = "Actualizar";
+            this.Actualizar.MinimumWidth = 6;
+            this.Actualizar.Name = "Actualizar";
+            this.Actualizar.ReadOnly = true;
+            this.Actualizar.Width = 90;
             // 
-            // Delete
+            // Borrar
             // 
-            this.Delete.HeaderText = "Delete";
-            this.Delete.MinimumWidth = 6;
-            this.Delete.Name = "Delete";
-            this.Delete.ReadOnly = true;
-            this.Delete.Width = 91;
+            this.Borrar.HeaderText = "Borrar";
+            this.Borrar.MinimumWidth = 6;
+            this.Borrar.Name = "Borrar";
+            this.Borrar.ReadOnly = true;
+            this.Borrar.Width = 91;
             // 
             // productModelBindingSource1
             // 
@@ -137,7 +137,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.listadoProductos);
             this.Name = "ListaProductos";
-            this.Text = "ListaProductos";
+            this.Text = "Lista de productos";
             ((System.ComponentModel.ISupportInitialize)(this.listadoProductos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productModelBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productModelBindingSource)).EndInit();
@@ -155,7 +155,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Description;
         private System.Windows.Forms.DataGridViewTextBoxColumn Price;
         private System.Windows.Forms.DataGridViewTextBoxColumn Categories;
-        private System.Windows.Forms.DataGridViewButtonColumn Update;
-        private System.Windows.Forms.DataGridViewButtonColumn Delete;
+        private System.Windows.Forms.DataGridViewButtonColumn Actualizar;
+        private System.Windows.Forms.DataGridViewButtonColumn Borrar;
     }
 }

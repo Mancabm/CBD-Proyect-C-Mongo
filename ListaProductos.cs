@@ -51,7 +51,7 @@ namespace C_Mongo
                     }
                 }
                 string[] row = {product.Id, product.Name, product.Description, product.Price +"€",
-                    categorias, "Update", "Delete"};
+                    categorias, "Actualizar", "Borrar"};
                 listadoProductos.Rows.Add(row);
 
             }
@@ -61,7 +61,7 @@ namespace C_Mongo
         {
           
 
-            if (listadoProductos.Columns[e.ColumnIndex].Name=="Delete") 
+            if (listadoProductos.Columns[e.ColumnIndex].Name== "Borrar") 
             {
                 if (MessageBox.Show("¿Estás seguro de que quieres borrar este producto?","Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question)== DialogResult.Yes)
                 {
@@ -78,7 +78,7 @@ namespace C_Mongo
                 }
             
             }
-            if (listadoProductos.Columns[e.ColumnIndex].Name == "Update")
+            if (listadoProductos.Columns[e.ColumnIndex].Name == "Actualizar")
             {
                 if (MessageBox.Show("¿Estás seguro de que quieres actualizar este producto?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {

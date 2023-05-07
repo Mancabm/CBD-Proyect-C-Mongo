@@ -62,7 +62,7 @@
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.label1);
             this.Name = "Inicio";
-            this.Text = "Inicio1";
+            this.Text = "Inicio";
             this.ResumeLayout(false);
             this.PerformLayout();
 
